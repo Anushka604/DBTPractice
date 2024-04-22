@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw_database_source
+    database: PC_DBT_DB
+    schema: PUBLIC
+    tables:
+       - name: ACCOUNT
+       - name: USER
+       - name: ORDER
+
+  - name: ref_SCD2
+    database: PC_DBT_DB
+    schema: DBT_ABAVISKAR
+    tables:
+       - name: SCD2_USER_SNAPSHOT
+       - name: DIM_ACCOUNT
+       - name: DIM_USER
+       - name: DIM_DATE
+
+
+  
